@@ -10,9 +10,7 @@ import {
 
 import { useFonts } from "expo-font";
 
-import DropShadow from "react-native-drop-shadow";
-
-function LoginScreen(props) {
+function LoginScreen({ navigation }) {
   const [fontsLoaded] = useFonts({
     "Lato-Regular": require("../assets/Fonts/Lato-Regular.ttf"),
   });
@@ -30,7 +28,10 @@ function LoginScreen(props) {
         ></Image>
         <Text style={styles.selectText}> Please Select One</Text>
 
-        <TouchableOpacity style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.buttonContainer}
+          onPress={() => navigation.navigate("NeedFood")}
+        >
           <Text style={styles.textDriver}>Driver</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonContainer}>

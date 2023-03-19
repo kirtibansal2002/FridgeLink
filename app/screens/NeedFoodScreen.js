@@ -51,7 +51,7 @@ export default function NeedFoodScreen() {
       setLocation(currentLocation);
       const query = new URLSearchParams({
         location: `${currentLocation.coords.latitude},${currentLocation.coords.longitude}`,
-        radius: 50000,
+        radius: 10000,
         keyword: "CFTO Locations",
         key: API_KEY,
       });

@@ -12,9 +12,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="NeedFood" component={NeedFoodScreen} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Select" component={LoginScreen} />
+        <Stack.Screen name="NeedFood" component={NeedFoodScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
