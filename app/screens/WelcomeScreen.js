@@ -12,9 +12,10 @@ import EvilIcons from "@expo/vector-icons/EvilIcons";
 
 import { useFonts } from "expo-font";
 
-function WelcomeScreen(props) {
+function WelcomeScreen({ navigation }) {
   const [fontsLoaded] = useFonts({
     "Rajdhani-Regular": require("../assets/Fonts/Rajdhani-Regular.ttf"),
+    "Rajdhani-Bold": require("../assets/Fonts/Rajdhani-Bold.ttf"),
   });
 
   if (!fontsLoaded) {
@@ -33,7 +34,7 @@ function WelcomeScreen(props) {
         </View>
         <View style={styles.buttonContainer}>
           <Button
-            // onPress={() => props.navigation.navigate("Login")}
+            onPress={() => navigation.navigate("Select")}
             title={"Let's go!"}
             color={"#FF9D43"}
           />
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
 
   logoText: {
     zIndex: 1,
-    fontFamily: "Rajdhani-Regular",
+    fontFamily: "Rajdhani-Bold",
     color: "#FF9D43",
     fontSize: 50,
     textAlign: "center",
@@ -90,7 +91,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 12,
     borderColor: "#FF9D43",
-    marginBottom: "20%",
+    marginBottom: "30%",
     justifyContent: "center",
   },
 
@@ -99,7 +100,8 @@ const styles = StyleSheet.create({
   },
 
   icon: {
-    left: 20,
+    position: "absolute",
+    right: 5,
   },
 
   heroContainer: {
