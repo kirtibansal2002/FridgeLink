@@ -1,16 +1,10 @@
-import React from 'react';
-import { ImageBackground, StyleSheet } from 'react-native';
+import React from "react";
+import { ImageBackground, StyleSheet } from "react-native";
 
 function LoginScreen(props) {
-    return (
-        <ImageBackground>
-
-        </ImageBackground>
-    );
+  return <ImageBackground></ImageBackground>;
 }
 
-const styles = StyleSheet.create({
-    
-})
+const styles = StyleSheet.create({});
 
 export default LoginScreen;
